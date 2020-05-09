@@ -1,23 +1,24 @@
 package com.manerajona.sprock.controllers
 
 import com.manerajona.sprock.UnitTest
-import com.manerajona.sprock.services.GreetingServiceImpl
 import org.junit.experimental.categories.Category
+import org.springframework.beans.factory.annotation.Autowired
 import spock.lang.Specification
 
 @Category(UnitTest.class)
-class ConstructorInjectedControllerTest extends Specification {
+class MyControllerTest extends Specification {
 
-    ConstructorInjectedController controller
+    @Autowired
+    MyController controller
 
     def setup() {
-        controller = new ConstructorInjectedController(new GreetingServiceImpl())
+        controller = new MyController()
     }
 
     def "GetGreetingService"() {
         println 'Running GetGreetingService...'
 
         expect: 'Should return the correct message'
-        controller.getGreetingService().sayHello() == 'Hi there!'
+        controller.sayHello() == 'Hi folks'
     }
 }
