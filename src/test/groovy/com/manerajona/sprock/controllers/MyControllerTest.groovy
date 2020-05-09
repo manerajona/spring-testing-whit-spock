@@ -15,10 +15,10 @@ class MyControllerTest extends Specification {
         controller = new MyController()
     }
 
-    def "GetGreetingService"() {
-        println 'Running GetGreetingService...'
+    def "Say hello"() {
+        println 'Running Say hello...'
 
         expect: 'Should return the correct message'
-        controller.sayHello() == 'Hi folks'
+        controller.sayHello() == 'Hi folks!'
     }
 }

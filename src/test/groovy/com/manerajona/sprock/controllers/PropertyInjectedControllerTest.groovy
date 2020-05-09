@@ -17,7 +17,7 @@ class PropertyInjectedControllerTest extends Specification {
         controller.greetingService = new GreetingServiceImpl()
     }
 
-    def "GetGreetings"() {
+    def "Get greetings"() {
         println 'Running GetGreetings...'
 
         expect: 'Should return the correct message'
