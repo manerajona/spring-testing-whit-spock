@@ -1,5 +1,6 @@
-package com.manerajona.sprock.services;
+package com.manerajona.sprock.services.impl;
 
+import com.manerajona.sprock.services.GreetingService;
 import org.springframework.stereotype.Service;
 
 @Service
