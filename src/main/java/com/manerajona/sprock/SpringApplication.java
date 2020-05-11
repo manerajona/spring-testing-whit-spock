@@ -1,5 +1,6 @@
 package com.manerajona.sprock;
 
+import com.manerajona.sprock.controllers.I18nController;
 import com.manerajona.sprock.controllers.MyController;
 import com.manerajona.sprock.controllers.PropertyInjectedController;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,6 +14,9 @@ public class SpringApplication {
 
 		MyController controller = (MyController) ctx.getBean("myController");
 		System.out.println(controller.sayHello());
+
+		I18nController i18n = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18n.sayGreeting());
 
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
 		System.out.println(propertyInjectedController.getGreetings());
